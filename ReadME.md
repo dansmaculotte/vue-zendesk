@@ -20,7 +20,7 @@ This plugin allows you to configure and add Zendesk Web Widget
 
 ```js
 import Vue from 'vue'
-import Zendesk from '@dansmaculotte'
+import Zendesk from '@dansmaculotte/vue-zendesk'
 
 Vue.use(Zendesk, {
   key: 'YOUR_ZENDESK_KEY',
