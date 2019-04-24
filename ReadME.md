@@ -53,6 +53,10 @@ this.$zendesk('webWidget', 'show')
 2. Install dependencies using `yarn install` or `npm install`
 3. Start development server using `npm run dev`
 
+## ToDo
+
+- Test suite with Jest
+
 ## License
 
 [MIT License](./LICENSE.md)
