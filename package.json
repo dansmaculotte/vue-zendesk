@@ -1,6 +1,6 @@
 {
   "name": "@dansmaculotte/vue-zendesk",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Vue plugin for Zendesk Web Widget",
   "license": "MIT",
   "main": "src/index.js",
