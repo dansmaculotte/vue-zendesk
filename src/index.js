@@ -1,7 +1,7 @@
-import load from 'load-script'
+const load = require('load-script')
 
-export default {
-  install: (Vue, options) => {
+module.exports = {
+  install: function (Vue, options) {
     if (!options.key || options.key.length == 0) {
       console.warn('Please enter a Zendesk Web Widget Key')
       return
