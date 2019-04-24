@@ -7,7 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-> Vue.js plugin for Zendesk
+> Vue.js plugin for Zendesk Web Widget
 
 This plugin allows you to configure and add Zendesk Web Widget
 
@@ -35,6 +35,17 @@ Vue.use(Zendesk, {
 ```
 
 Settings option comes from [Zendesk documentation](https://developer.zendesk.com/embeddables/docs/widget/settings).
+
+## Usage
+
+You can use any method coming from the official documentation.
+
+For example:
+```js
+Vue.$zendesk('webWidget', 'hide')
+// In a vue component
+this.$zendesk('webWidget', 'show')
+```
 
 ## Development
 
