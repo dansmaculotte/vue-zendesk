@@ -23,9 +23,7 @@
   "files": [
     "src"
   ],
-  "dependencies": {
-    "load-script": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",

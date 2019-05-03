@@ -1,5 +1,3 @@
-const load = require('load-script')
-
 module.exports = {
   install: function (Vue, options) {
     if (!options.key || options.key.length === 0) {
