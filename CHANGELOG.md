@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.1](https://github.com/dansmaculotte/vue-zendesk/compare/v0.2.0...v0.2.1) (2019-05-03)
+
+
+### Bug Fixes
+
+* remove unused dependency load-script ([bf708b9](https://github.com/dansmaculotte/vue-zendesk/commit/bf708b9))
+
+
+
 # [0.2.0](https://github.com/dansmaculotte/vue-zendesk/compare/v0.1.1...v0.2.0) (2019-05-03)
 
 
