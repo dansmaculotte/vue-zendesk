@@ -11,7 +11,7 @@
 
 This plugin allows you to configure and add Zendesk Web Widget
 
-[Zendesk Developer Documentation](https://developer.zendesk.com/embeddables/docs/widget/introduction)
+[Zendesk Web Widget Documentation](https://developer.zendesk.com/embeddables/docs/widget/introduction)
 
 ## Setup
 
@@ -24,6 +24,7 @@ import Zendesk from '@dansmaculotte/vue-zendesk'
 
 Vue.use(Zendesk, {
   key: 'YOUR_ZENDESK_KEY',
+  disabled: true,
   settings: {
     webWidget: {
       color: {
@@ -34,7 +35,11 @@ Vue.use(Zendesk, {
 })
 ```
 
-Settings option comes from [Zendesk documentation](https://developer.zendesk.com/embeddables/docs/widget/settings).
+`disabled` option allows you to prevent automatic script loading, to comply with GDPR.
+
+You can manually load it by calling `this.$zendesk.load(YOUR_ZENDESK_KEY)`.
+
+You can view available settings [here](https://developer.zendesk.com/embeddables/docs/widget/settings).
 
 ## Usage
 
@@ -53,10 +58,6 @@ this.$zendesk('webWidget', 'show')
 2. Install dependencies using `yarn install` or `npm install`
 3. Start development server using `npm run dev`
 
-## ToDo
-
-- Test suite with Jest
-
 ## License
 
 [MIT License](./LICENSE.md)
@@ -67,12 +68,6 @@ this.$zendesk('webWidget', 'show')
 
 [npm-downloads-src]: https://img.shields.io/npm/v/@dansmaculotte/vue-zendesk/latest.svg?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/@dansmaculotte/vue-zendesk
-
-[circle-ci-src]: https://img.shields.io/circleci/project/github/dansmaculotte/vue-zendesk.svg?style=flat-square
-[circle-ci-href]: https://circleci.com/gh/dansmaculotte/vue-zendesk
-
-[codecov-src]: https://img.shields.io/codecov/c/github/dansmaculotte/vue-zendesk.svg?style=flat-square
-[codecov-href]: https://codecov.io/gh/dansmaculotte/vue-zendesk
 
 [david-dm-src]: https://david-dm.org/dansmaculotte/vue-zendesk/status.svg?style=flat-square
 [david-dm-href]: https://david-dm.org/dansmaculotte/vue-zendesk

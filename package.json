@@ -21,7 +21,7 @@
     "release": "yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "dependencies": {
     "load-script": "^1.0.0"

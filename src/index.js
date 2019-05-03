@@ -2,24 +2,29 @@ const load = require('load-script')
 
 module.exports = {
   install: function (Vue, options) {
-    if (!options.key || options.key.length == 0) {
+    if (!options.key || options.key.length === 0) {
       console.warn('Please enter a Zendesk Web Widget Key')
       return
     }
 
+    const zE = window.zE = window.zE || []
+
     window.zESettings = options.settings
 
-    const source = `https://static.zdassets.com/ekr/snippet.js?key=${options.key}`
-    load(source, {
-      attrs: {
-        id: 'ze-snippet'
-      }
-    }, (error) => {
-      if (error) {
-        console.warn('Failed to loaded Zendesk Web Widget')
-        return
-      }
-    })
+    zE.load = (key) => {
+      const script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.async = true
+      script.id = 'ze-snippet'
+      script.src = 'https://static.zdassets.com/ekr/snippet.js?key=' + key
+
+      const first = document.getElementsByTagName('script')[0]
+      first.parentNode.insertBefore(script, first)
+    }
+
+    if (!options.disabled) {
+      zE.load(options.key)
+    }
 
     Object.defineProperty(Vue, '$zendesk', {
       get () { return window.zE }

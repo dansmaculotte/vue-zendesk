@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Works !</h1>
+    <button @click="load">Load</button>
     <button @click="toggle">Toggle</button>
   </div>
 </template>
@@ -13,6 +14,9 @@ export default {
     }
   },
   methods: {
+    load() {
+      this.$zendesk.load(ZENDESK_KEY)
+    },
     toggle() {
       if (this.status) {
         this.$zendesk('webWidget', 'hide')

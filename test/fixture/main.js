@@ -4,6 +4,7 @@ import Zendesk from '../../src/index.js'
 
 Vue.use(Zendesk, {
   key: ZENDESK_KEY,
+  disabled: true,
   settings: {
     webWidget: {
       color: {
@@ -20,5 +21,3 @@ new Vue({
   el: '#app',
   render: h => h(App)
 })
-
-// Vue.rollbar.debug('Heyhey!')
