@@ -19,9 +19,9 @@ export default {
     },
     toggle() {
       if (this.status) {
-        this.$zendesk('webWidget', 'hide')
+        this.$zendesk.hide()
       } else {
-        this.$zendesk('webWidget', 'show')
+        this.$zendesk.show()
       }
 
       this.status = !this.status

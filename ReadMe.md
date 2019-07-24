@@ -23,6 +23,7 @@ import Zendesk from '@dansmaculotte/vue-zendesk'
 Vue.use(Zendesk, {
   key: 'YOUR_ZENDESK_KEY',
   disabled: true,
+  hideOnLoad: true,
   settings: {
     webWidget: {
       color: {
@@ -33,21 +34,51 @@ Vue.use(Zendesk, {
 })
 ```
 
+### Options
+
+#### `disabled`
+
 `disabled` option allows you to prevent automatic script loading, to comply with GDPR.
 
 You can manually load it by calling `this.$zendesk.load(YOUR_ZENDESK_KEY)`.
 
-You can view available settings [here](https://developer.zendesk.com/embeddables/docs/widget/settings).
+#### `hideOnLoad`
+
+When Zendesk Web Widget is initialized it automatically shows the widget, to prevent this you can set to `true` this option so you can manually show it after.
+
+#### `settings`
+
+You can view Zendesk Web Widget available settings [here](https://developer.zendesk.com/embeddables/docs/widget/settings).
 
 ## Usage
 
 You can use any method coming from the official documentation.
+Every methods are accessible from `$zendesk` object.
 
 For example:
 ```js
-Vue.$zendesk('webWidget', 'hide')
+Vue.$zendesk.hide()
 // In a vue component
-this.$zendesk('webWidget', 'show')
+this.$zendesk.show()
+```
+
+You can also listen to `zendeskLoaded` event emitted on script load.
+
+For example:
+```js
+this.$on('zendeskLoaded', (event) => {
+  this.$zendesk.identify({
+    name: 'John'
+  })
+})
+```
+
+You can access to Zendesk Web Widget instance through `this.$zendesk.zE` or `window.zE` objects.
+
+For example:
+```js
+this.$zendesk.zE('webWidget', 'hide')
+window.zE('webWidget', 'hide')
 ```
 
 ## Development
