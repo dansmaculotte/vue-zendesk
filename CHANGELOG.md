@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/dansmaculotte/vue-zendesk/compare/v0.2.3...v0.3.0) (2019-07-24)
+
+
+### Features
+
+* add api methods and script load event ([0bddf5a](https://github.com/dansmaculotte/vue-zendesk/commit/0bddf5a))
+
+
+
 ### [0.2.3](https://github.com/dansmaculotte/vue-zendesk/compare/v0.2.2...v0.2.3) (2019-07-18)
 
 
