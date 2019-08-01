@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.0...v0.3.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* set default value for options ([b068d86](https://github.com/dansmaculotte/vue-zendesk/commit/b068d86))
+
+
+
 ## [0.3.0](https://github.com/dansmaculotte/vue-zendesk/compare/v0.2.3...v0.3.0) (2019-07-24)
 
 
