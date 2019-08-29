@@ -3,6 +3,8 @@
     <h1>Works !</h1>
     <button @click="load">Load</button>
     <button @click="toggle">Toggle</button>
+    <button @click="show">Show</button>
+    <button @click="hide">Hide</button>
   </div>
 </template>
 
@@ -10,7 +12,7 @@
 export default {
   data() {
     return {
-      status: true
+      status: false
     }
   },
   methods: {
@@ -25,6 +27,12 @@ export default {
       }
 
       this.status = !this.status
+    },
+    show() {
+      this.$zendesk.zE('webWidget', 'show')
+    },
+    hide() {
+      this.$zendesk.zE('webWidget', 'hide')
     }
   }
 }

@@ -56,7 +56,9 @@ module.exports = {
     Vue.close = () => window.zE("webWidget", "close");
     Vue.open = () => window.zE("webWidget", "open");
 
-    Vue.zE = window.zE;
+    Object.defineProperty(Vue, 'zE', {
+      get () { return window.zE; }
+    });
 
     Vue.prototype.$zendesk = Vue;
   }
