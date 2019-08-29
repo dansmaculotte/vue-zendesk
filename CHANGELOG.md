@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.1...v0.3.2) (2019-08-29)
+
+
+### Bug Fixes
+
+* zE object was not defined correctly ([85c0a14](https://github.com/dansmaculotte/vue-zendesk/commit/85c0a14))
+
 ### [0.3.1](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.0...v0.3.1) (2019-08-01)
 
 
