@@ -1,8 +1,9 @@
 module.exports = {
   install(Vue, options = {}) {
-    if (!options.key || options.key.length === 0) {
+    if (!options.disabled && (!options.key || options.key.length === 0)) {
       console.warn("Please enter a Zendesk Web Widget Key");
-      return;
+      console.warn("Zendesk is disabled");
+      options.disabled = true;
     }
 
     window.zESettings = options.settings;
