@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.2...v0.3.3) (2020-01-14)
+
+
+### Bug Fixes
+
+* Merge pull request [#6](https://github.com/dansmaculotte/vue-zendesk/issues/6) from dansmaculotte/fix-disabled-option-handling ([fe57829](https://github.com/dansmaculotte/vue-zendesk/commit/fe578292a134b0dec00b02aee44c9fd7c55d19e9))
+
 ### [0.3.2](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.1...v0.3.2) (2019-08-29)
 
 
