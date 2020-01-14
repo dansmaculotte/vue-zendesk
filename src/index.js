@@ -1,8 +1,11 @@
 module.exports = {
   install(Vue, options = {}) {
-    if (!options.key || options.key.length === 0) {
+    if (!options.disabled && (!options.key || options.key.length === 0)) {
       console.warn("Please enter a Zendesk Web Widget Key");
-      return;
+    }
+
+    const disabledLogger = function (method, ...args) {
+      console.log("Zendesk is disabled, you called:", { method, args });
     }
 
     window.zESettings = options.settings;
@@ -57,7 +60,7 @@ module.exports = {
     Vue.open = () => window.zE("webWidget", "open");
 
     Object.defineProperty(Vue, 'zE', {
-      get () { return window.zE; }
+      get () { return window.zE || disabledLogger; }
     });
 
     Vue.prototype.$zendesk = Vue;
