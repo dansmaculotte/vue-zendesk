@@ -8,6 +8,10 @@ module.exports = {
       console.log("Zendesk is disabled, you called:", { method, args });
     }
 
+    if (options.disabled) {
+      window.zE = disabledLogger;
+    }
+
     window.zESettings = options.settings;
 
     Vue._script = document.createElement("script");
@@ -60,7 +64,7 @@ module.exports = {
     Vue.open = () => window.zE("webWidget", "open");
 
     Object.defineProperty(Vue, 'zE', {
-      get () { return window.zE || disabledLogger; }
+      get () { return window.zE; }
     });
 
     Vue.prototype.$zendesk = Vue;
