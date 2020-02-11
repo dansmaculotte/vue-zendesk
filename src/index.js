@@ -4,9 +4,9 @@ module.exports = {
       console.warn("Please enter a Zendesk Web Widget Key");
     }
 
-    const disabledLogger = function (method, ...args) {
+    const disabledLogger = function(method, ...args) {
       console.log("Zendesk is disabled, you called:", { method, args });
-    }
+    };
 
     if (options.disabled) {
       window.zE = disabledLogger;
@@ -22,6 +22,7 @@ module.exports = {
       "https://static.zdassets.com/ekr/snippet.js?key=" + options.key;
 
     Vue.load = () => {
+      delete window.zE;
       const first = document.getElementsByTagName("script")[0];
       first.parentNode.insertBefore(Vue._script, first);
     };
@@ -63,8 +64,10 @@ module.exports = {
     Vue.close = () => window.zE("webWidget", "close");
     Vue.open = () => window.zE("webWidget", "open");
 
-    Object.defineProperty(Vue, 'zE', {
-      get () { return window.zE; }
+    Object.defineProperty(Vue, "zE", {
+      get() {
+        return window.zE;
+      }
     });
 
     Vue.prototype.$zendesk = Vue;

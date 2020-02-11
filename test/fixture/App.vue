@@ -29,10 +29,10 @@ export default {
       this.status = !this.status
     },
     show() {
-      this.$zendesk.zE('webWidget', 'show')
+      this.$zendesk.show()
     },
     hide() {
-      this.$zendesk.zE('webWidget', 'hide')
+      this.$zendesk.hide()
     }
   }
 }
