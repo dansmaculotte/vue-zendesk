@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.4...v0.3.5) (2020-02-11)
+
+
+### Bug Fixes
+
+* unreference window.zE before loading Zendesk ([520a4a9](https://github.com/dansmaculotte/vue-zendesk/commit/520a4a9ed98ef48c37c38f43a9ce126384cd8102))
+
 ### [0.3.4](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.3...v0.3.4) (2020-01-14)
 
 
