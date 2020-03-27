@@ -1,6 +1,6 @@
 {
   "name": "@dansmaculotte/vue-zendesk",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Vue plugin for Zendesk Web Widget",
   "license": "MIT",
   "main": "src/index.js",
@@ -42,7 +42,7 @@
     "eslint-plugin-promise": "latest",
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
-    "husky": "latest",
+    "husky": "^4.2.3",
     "jest": "latest",
     "standard-version": "latest",
     "vue": "latest",
