@@ -34,6 +34,11 @@ export default {
     hide() {
       this.$zendesk.hide()
     }
+  },
+  created() {
+    this.$zendesk.$on('loaded', () => {
+      console.log('zendesk is loaded !')
+    })
   }
 }
 </script>
