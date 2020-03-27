@@ -14,62 +14,61 @@ module.exports = {
 
     window.zESettings = options.settings;
 
-    Vue._script = document.createElement("script");
-    Vue._script.type = "text/javascript";
-    Vue._script.async = true;
-    Vue._script.id = "ze-snippet";
-    Vue._script.src =
+    const root = new Vue()
+    root._script = document.createElement("script");
+    root._script.type = "text/javascript";
+    root._script.async = true;
+    root._script.id = "ze-snippet";
+    root._script.src =
       "https://static.zdassets.com/ekr/snippet.js?key=" + options.key;
 
-    Vue.load = () => {
+    let isLoaded = false
+
+    root.load = () => {
+      if (isLoaded) {
+        return;
+      }
+
       delete window.zE;
       const first = document.getElementsByTagName("script")[0];
-      first.parentNode.insertBefore(Vue._script, first);
-    };
+      first.parentNode.insertBefore(root._script, first);
 
-    Vue.mixin({
-      created() {
-        if (!options.disabled) {
-          Vue.load(options.key);
-        }
+      root._script.onload = (event) => {
+        isLoaded = true
+        root.$emit("loaded", event);
 
-        Vue._script.addEventListener("load", this.zendeskLoaded);
-      },
-      destroyed() {
-        Vue._script.removeEventListener("load", this.zendeskLoaded);
-      },
-      methods: {
-        zendeskLoaded(event) {
-          this.$emit("zendeskLoaded", event);
-
-          if (options.hideOnLoad) {
-            Vue.hide();
-          }
+        if (options.hideOnLoad) {
+          root.hide();
         }
       }
-    });
 
-    Vue.hide = () => window.zE("webWidget", "hide");
-    Vue.show = () => window.zE("webWidget", "show");
-    Vue.logout = () => window.zE("webWidget", "logout");
-    Vue.identify = user => window.zE("webWidget", "identify", user);
-    Vue.prefill = user => window.zE("webWidget", "prefill", user);
-    Vue.setLocale = locale => window.zE("webWidget", "setLocale", locale);
-    Vue.updateSettings = settings =>
+    };
+
+    if (!options.disabled) {
+      root.load(options.key);
+    }
+
+    root.hide = () => window.zE("webWidget", "hide");
+    root.show = () => window.zE("webWidget", "show");
+    root.logout = () => window.zE("webWidget", "logout");
+    root.identify = user => window.zE("webWidget", "identify", user);
+    root.prefill = user => window.zE("webWidget", "prefill", user);
+    root.setLocale = locale => window.zE("webWidget", "setLocale", locale);
+    root.updateSettings = settings =>
       window.zE("webWidget", "updateSettings", settings);
-    Vue.clear = () => window.zE("webWidget", "clear");
-    Vue.updatePath = options => window.zE("updatePath", "clear", options);
-    Vue.toggle = () => window.zE("webWidget", "toggle");
-    Vue.reset = () => window.zE("webWidget", "reset");
-    Vue.close = () => window.zE("webWidget", "close");
-    Vue.open = () => window.zE("webWidget", "open");
+    root.clear = () => window.zE("webWidget", "clear");
+    root.updatePath = options => window.zE("updatePath", "clear", options);
+    root.toggle = () => window.zE("webWidget", "toggle");
+    root.reset = () => window.zE("webWidget", "reset");
+    root.close = () => window.zE("webWidget", "close");
+    root.open = () => window.zE("webWidget", "open");
 
-    Object.defineProperty(Vue, "zE", {
+    Object.defineProperty(root, "zE", {
       get() {
         return window.zE;
       }
     });
 
-    Vue.prototype.$zendesk = Vue;
+    Vue.prototype.$zendesk = root;
   }
 };

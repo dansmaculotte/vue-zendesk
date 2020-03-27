@@ -62,11 +62,11 @@ Vue.$zendesk.hide()
 this.$zendesk.show()
 ```
 
-You can also listen to `zendeskLoaded` event emitted on script load.
+You can also listen to `loaded` event emitted on script load.
 
 For example:
 ```js
-this.$on('zendeskLoaded', (event) => {
+this.$zendesk.$on('loaded', (event) => {
   this.$zendesk.identify({
     name: 'John'
   })
