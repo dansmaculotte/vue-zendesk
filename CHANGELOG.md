@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.9...v0.4.0) (2020-03-27)
+
 ### [0.3.9](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.8...v0.3.9) (2020-03-27)
 
 ### [0.3.8](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.7...v0.3.8) (2020-03-27)
