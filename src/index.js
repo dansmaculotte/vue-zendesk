@@ -35,11 +35,12 @@ module.exports = {
 
       root._script.onload = (event) => {
         isLoaded = true
-        root.$emit("loaded", event);
 
         if (options.hideOnLoad) {
           root.hide();
         }
+
+        root.$emit("loaded", event);
       }
 
     };
