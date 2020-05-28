@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.0...v0.4.1) (2020-05-28)
+
+
+### Bug Fixes
+
+* hide Zendesk widget before triggering load event ([0247594](https://github.com/dansmaculotte/vue-zendesk/commit/0247594ee255df64b0a0a0897c543a9d15d549e6))
+
 ## [0.4.0](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.9...v0.4.0) (2020-03-27)
 
 ### [0.3.9](https://github.com/dansmaculotte/vue-zendesk/compare/v0.3.8...v0.3.9) (2020-03-27)
