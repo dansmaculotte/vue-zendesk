@@ -15,25 +15,26 @@ module.exports = {
     window.zESettings = options.settings;
 
     const root = new Vue()
-    root._script = document.createElement("script");
-    root._script.type = "text/javascript";
-    root._script.async = true;
-    root._script.id = "ze-snippet";
-    root._script.src =
-      "https://static.zdassets.com/ekr/snippet.js?key=" + options.key;
 
     let isLoaded = false
 
-    root.load = () => {
+    root.load = (zendeskKey) => {
       if (isLoaded) {
         return;
       }
 
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.id = "ze-snippet";
+      script.src =
+        "https://static.zdassets.com/ekr/snippet.js?key=" + zendeskKey;
+
       delete window.zE;
       const first = document.getElementsByTagName("script")[0];
-      first.parentNode.insertBefore(root._script, first);
+      first.parentNode.insertBefore(script, first);
 
-      root._script.onload = (event) => {
+      script.onload = (event) => {
         isLoaded = true
 
         if (options.hideOnLoad) {
