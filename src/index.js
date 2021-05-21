@@ -1,5 +1,5 @@
 module.exports = {
-  install(Vue, options = {}) {
+  install: function install(Vue, options = {}) {
     if (!options.disabled && (!options.key || options.key.length === 0)) {
       console.warn("Please enter a Zendesk Web Widget Key");
     }
@@ -66,7 +66,7 @@ module.exports = {
     root.open = () => window.zE("webWidget", "open");
 
     Object.defineProperty(root, "zE", {
-      get() {
+      get: function get() {
         return window.zE;
       }
     });
