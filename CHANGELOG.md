@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.2...v0.4.3) (2021-05-25)
+
+
+### Bug Fixes
+
+* webpack web server ([0fd9f37](https://github.com/dansmaculotte/vue-zendesk/commit/0fd9f370565468add01414fc39f75813996528aa))
+
 ### [0.4.2](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.1...v0.4.2) (2021-05-25)
 
 
