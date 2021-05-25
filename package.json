@@ -35,7 +35,7 @@
     "babel-eslint": "latest",
     "babel-jest": "27.0.0",
     "babel-loader": "8.2.2",
-    "codecov": "3.8.1",
+    "codecov": "3.8.2",
     "dotenv": "10.0.0",
     "eslint": "7.27.0",
     "eslint-config-standard": "16.0.3",
