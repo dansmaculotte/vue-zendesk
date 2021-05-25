@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.1...v0.4.2) (2021-05-25)
+
+
+### Features
+
+* make plugin compatible with IE11 [#11](https://github.com/dansmaculotte/vue-zendesk/issues/11) ([cfa9e08](https://github.com/dansmaculotte/vue-zendesk/commit/cfa9e0832707ebe37ce1f3ec1baa932de5ab72f6))
+
+
+### Bug Fixes
+
+* allow to pass zd key to load method [#7](https://github.com/dansmaculotte/vue-zendesk/issues/7) ([01824ee](https://github.com/dansmaculotte/vue-zendesk/commit/01824ee62b6a2fcbcdfbd451e1479dd94831354a))
+
 ### [0.4.1](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.0...v0.4.1) (2020-05-28)
 
 
