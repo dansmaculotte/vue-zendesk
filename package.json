@@ -19,7 +19,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "cd test && NODE_ENV=development webpack-dev-server --open --hot",
+    "dev": "cd test && NODE_ENV=development webpack serve --open --hot",
     "lint": "eslint src test",
     "test": "yarn lint && echo ToDo",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish"
@@ -27,7 +27,6 @@
   "files": [
     "src"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.14.3",
     "@babel/preset-env": "7.14.2",
