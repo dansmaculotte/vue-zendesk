@@ -62,7 +62,7 @@ Vue.$zendesk.hide()
 this.$zendesk.show()
 ```
 
-You can also listen to `loaded` event emitted on script load.
+You can also listen to `loaded` event emitted on script load, `open` on widget open and `close` on widget close.
 
 For example:
 ```js
@@ -70,6 +70,14 @@ this.$zendesk.$on('loaded', (event) => {
   this.$zendesk.identify({
     name: 'John'
   })
+})
+
+this.$zendesk.$on('open', () => {
+  console.log('Widget is open')
+})
+
+this.$zendesk.$on('close', () => {
+  console.log('Widget is closed')
 })
 ```
 

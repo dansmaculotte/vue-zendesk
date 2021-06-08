@@ -14,11 +14,11 @@ module.exports = {
 
     window.zESettings = options.settings;
 
-    const root = new Vue()
+    const root = new Vue();
 
-    let isLoaded = false
+    let isLoaded = false;
 
-    root.load = (zendeskKey) => {
+    root.load = zendeskKey => {
       if (isLoaded) {
         return;
       }
@@ -27,7 +27,7 @@ module.exports = {
       script.type = "text/javascript";
       script.async = true;
       script.id = "ze-snippet";
-      const actualZendeskKey = zendeskKey || options.key
+      const actualZendeskKey = zendeskKey || options.key;
       script.src =
         "https://static.zdassets.com/ekr/snippet.js?key=" + actualZendeskKey;
 
@@ -35,16 +35,23 @@ module.exports = {
       const first = document.getElementsByTagName("script")[0];
       first.parentNode.insertBefore(script, first);
 
-      script.onload = (event) => {
-        isLoaded = true
+      script.onload = event => {
+        isLoaded = true;
 
         if (options.hideOnLoad) {
           root.hide();
         }
 
         root.$emit("loaded", event);
-      }
 
+        window.zE("webWidget:on", "open", () => {
+          root.$emit("open");
+        });
+
+        window.zE("webWidget:on", "close", () => {
+          root.$emit("close");
+        });
+      };
     };
 
     if (!options.disabled) {
