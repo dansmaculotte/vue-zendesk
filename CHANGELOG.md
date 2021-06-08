@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.3...v0.4.4) (2021-06-08)
+
+
+### Features
+
+* integrate on-open and on-close events from zendesk widget ([686e333](https://github.com/dansmaculotte/vue-zendesk/commit/686e333f846371cfcc3cc5b1e0d791cbf9c6d7f7))
+
+
+### Bug Fixes
+
+* use key set as option on manual load ([7e52d71](https://github.com/dansmaculotte/vue-zendesk/commit/7e52d71ab598aa1ae488e841ed798d93151ce7e1)), closes [#7](https://github.com/dansmaculotte/vue-zendesk/issues/7)
+
 ### [0.4.3](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.2...v0.4.3) (2021-05-25)
 
 
