@@ -27,8 +27,9 @@ module.exports = {
       script.type = "text/javascript";
       script.async = true;
       script.id = "ze-snippet";
+      const actualZendeskKey = zendeskKey || options.key
       script.src =
-        "https://static.zdassets.com/ekr/snippet.js?key=" + zendeskKey;
+        "https://static.zdassets.com/ekr/snippet.js?key=" + actualZendeskKey;
 
       delete window.zE;
       const first = document.getElementsByTagName("script")[0];
