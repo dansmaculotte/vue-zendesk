@@ -18,6 +18,7 @@ module.exports = {
 
     let isLoaded = false;
 
+    root.isLoaded = () => isLoaded;
     root.load = zendeskKey => {
       if (isLoaded) {
         return;
