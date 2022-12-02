@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.6...v0.4.7) (2022-12-02)
+
+
+### Features
+
+* handle nonce attribute for CSP ([a45f252](https://github.com/dansmaculotte/vue-zendesk/commit/a45f2521e1f3e3eb38bbb0f422cdaaae1934e48a)), closes [#36](https://github.com/dansmaculotte/vue-zendesk/issues/36)
+
 ### [0.4.6](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.4...v0.4.6) (2022-07-20)
 
 ### [0.4.4](https://github.com/dansmaculotte/vue-zendesk/compare/v0.4.3...v0.4.4) (2021-06-08)
