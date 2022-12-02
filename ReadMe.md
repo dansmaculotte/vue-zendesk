@@ -50,6 +50,10 @@ When Zendesk Web Widget is initialized it automatically shows the widget, to pre
 
 You can view Zendesk Web Widget available settings [here](https://developer.zendesk.com/embeddables/docs/widget/settings).
 
+#### `nonce`
+
+Allows you to set script tag `nonce` attribute to support CSP. See [zendesk doc](https://developer.zendesk.com/documentation/classic-web-widget-sdks/web-widget/integrating-with-google/csp/).
+
 ## Usage
 
 You can use any method coming from the official documentation.
