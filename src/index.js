@@ -32,6 +32,10 @@ module.exports = {
       script.src =
         "https://static.zdassets.com/ekr/snippet.js?key=" + actualZendeskKey;
 
+      if (options.nonce) {
+        script.setAttribute('nonce', options.nonce)
+      }
+
       delete window.zE;
       const first = document.getElementsByTagName("script")[0];
       first.parentNode.insertBefore(script, first);
